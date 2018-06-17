@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,133 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Canvas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ML2-Dx-6K8" customClass="CanvasView" customModule="Canvas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roa-VP-Wj6">
+                                <rect key="frame" x="10" y="625" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="redColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0UI-E0-8G2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utN-CU-N9O">
+                                <rect key="frame" x="56" y="625" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="greenColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wc4-nH-zQ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaU-zL-LzJ">
+                                <rect key="frame" x="102" y="625" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="blueColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qj2-xV-BcV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrM-Ws-jD0">
+                                <rect key="frame" x="335" y="625" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="whiteColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hL5-3T-R6N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lb9-zL-gTJ">
+                                <rect key="frame" x="289" y="625" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="yellowColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7O-LN-oPV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIc-bd-aq3">
+                                <rect key="frame" x="243" y="625" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="magentaColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="isf-o5-ZzJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVv-MD-vbe">
+                                <rect key="frame" x="169.5" y="617" width="36" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HEK-Hd-wRm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FrM-Ws-jD0" secondAttribute="trailing" constant="10" id="48l-MN-cPx"/>
+                            <constraint firstItem="utN-CU-N9O" firstAttribute="top" secondItem="ML2-Dx-6K8" secondAttribute="bottom" constant="8" id="8Xx-Sw-7e2"/>
+                            <constraint firstItem="Lb9-zL-gTJ" firstAttribute="leading" secondItem="RIc-bd-aq3" secondAttribute="trailing" constant="16" id="GUG-fB-Nyf"/>
+                            <constraint firstAttribute="bottom" secondItem="roa-VP-Wj6" secondAttribute="bottom" constant="12" id="ILX-ki-Cz7"/>
+                            <constraint firstAttribute="bottom" secondItem="ML2-Dx-6K8" secondAttribute="bottom" constant="50" id="Kgc-pi-526"/>
+                            <constraint firstItem="FrM-Ws-jD0" firstAttribute="leading" secondItem="Lb9-zL-gTJ" secondAttribute="trailing" constant="16" id="LlT-4g-j3K"/>
+                            <constraint firstItem="ML2-Dx-6K8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RC7-17-EjF"/>
+                            <constraint firstItem="ML2-Dx-6K8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rw7-cJ-wcN"/>
+                            <constraint firstItem="Lb9-zL-gTJ" firstAttribute="top" secondItem="ML2-Dx-6K8" secondAttribute="bottom" constant="8" id="SV9-hv-kZW"/>
+                            <constraint firstItem="QaU-zL-LzJ" firstAttribute="leading" secondItem="utN-CU-N9O" secondAttribute="trailing" constant="16" id="SYo-dp-TI6"/>
+                            <constraint firstItem="QaU-zL-LzJ" firstAttribute="top" secondItem="ML2-Dx-6K8" secondAttribute="bottom" constant="8" id="U2B-Wi-D4S"/>
+                            <constraint firstItem="UVv-MD-vbe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WzY-kM-bzN"/>
+                            <constraint firstItem="FrM-Ws-jD0" firstAttribute="top" secondItem="ML2-Dx-6K8" secondAttribute="bottom" constant="8" id="Y6R-PE-lqh"/>
+                            <constraint firstItem="RIc-bd-aq3" firstAttribute="top" secondItem="ML2-Dx-6K8" secondAttribute="bottom" constant="8" id="Ztm-Ja-Xdh"/>
+                            <constraint firstAttribute="bottom" secondItem="UVv-MD-vbe" secondAttribute="bottom" id="cx2-mE-7s9"/>
+                            <constraint firstAttribute="bottom" secondItem="QaU-zL-LzJ" secondAttribute="bottom" constant="12" id="dly-8h-Nvt"/>
+                            <constraint firstItem="utN-CU-N9O" firstAttribute="leading" secondItem="roa-VP-Wj6" secondAttribute="trailing" constant="16" id="ftd-JC-LjC"/>
+                            <constraint firstItem="UVv-MD-vbe" firstAttribute="top" secondItem="ML2-Dx-6K8" secondAttribute="bottom" id="gDC-LS-W6h"/>
+                            <constraint firstAttribute="trailing" secondItem="ML2-Dx-6K8" secondAttribute="trailing" id="gMz-tD-0KT"/>
+                            <constraint firstAttribute="bottom" secondItem="Lb9-zL-gTJ" secondAttribute="bottom" constant="12" id="j0F-1M-o1L"/>
+                            <constraint firstAttribute="bottom" secondItem="utN-CU-N9O" secondAttribute="bottom" constant="12" id="lDU-3d-P9v"/>
+                            <constraint firstItem="roa-VP-Wj6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="mAR-9S-lcX"/>
+                            <constraint firstAttribute="bottom" secondItem="FrM-Ws-jD0" secondAttribute="bottom" constant="12" id="sRu-cK-tWk"/>
+                            <constraint firstAttribute="bottom" secondItem="RIc-bd-aq3" secondAttribute="bottom" constant="12" id="uEK-PB-EtP"/>
+                            <constraint firstItem="roa-VP-Wj6" firstAttribute="top" secondItem="ML2-Dx-6K8" secondAttribute="bottom" constant="8" id="y3Z-F3-19n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="canvasView" destination="ML2-Dx-6K8" id="Adj-gj-tQg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
