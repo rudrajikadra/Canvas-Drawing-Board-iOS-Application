@@ -12,3 +12,4 @@ Xcode 9 and Swift 4 was used for the development of this application.
 ## How it looks like
 (Gif)
 
+![canvas](https://user-images.githubusercontent.com/15246084/41511589-747ab18e-7297-11e8-879d-8a8179c6334f.gif)
